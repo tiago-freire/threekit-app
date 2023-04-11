@@ -1,0 +1,52 @@
+.priceSection {
+  display: flex;
+  flex-direction: column;
+  border-left: 2px solid #eee;
+  padding: 0 20px;
+}
+
+.offering {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+.priceCTA {
+  color: #c31632;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0;
+  margin: 0;
+}
+
+.price {
+  color: #c31632;
+  font-size: 30px;
+  float: none;
+  width: 100%;
+  font-weight: 600;
+  margin: 0;
+}
+
+.oldPrice {
+  display: flex;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+  margin: 0;
+}
+.oldPrice .price {
+  color: #000;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0;
+}
+
+.oldPrice__lineThrough {
+  text-decoration: line-through;
+}
+
+.stock {
+  margin-top: 8px;
+}

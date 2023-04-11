@@ -1,0 +1,71 @@
+.title {
+  margin-top: 0;
+  margin-bottom: 5px;
+}
+.cardWrapper {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+
+.buttonWrapper {
+  position: relative;
+  box-sizing: border-box;
+  width: 110px;
+  padding: 20px 10px;
+  border: none;
+  background-color: transparent;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.card {
+  display: block;
+  width: 100%;
+  min-height: 110px;
+}
+
+.buttonWrapper:not(:last-child) {
+  margin-right: 10px;
+}
+
+.buttonWrapper:hover {
+  border: 2px solid #000;
+}
+
+.unselected {
+  border: 2px solid #eee;
+}
+
+.selected {
+  border: 2px solid #000;
+}
+
+.itemLabel {
+  margin: 5px 0;
+  font-size: 16px;
+}
+
+.hasThumbnail {
+  padding: 0;
+}
+.hasThumbnail .itemLabel {
+  font-size: 12px;
+}
+
+.flag__selected {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  padding: 5px;
+  background-color: #9cbd2e;
+  border-radius: 50%;
+}
+
+.flag__selected img {
+  width: 100%;
+  height: auto;
+}

@@ -1,0 +1,67 @@
+{
+  "vendor": "vtextitantools",
+  "name": "threekit-app",
+  "version": "1.0.0",
+  "title": "VTEX Titan Tools ThreeKit POC",
+  "description": "VTEX Titan Tools blind configuration repo, using Threekit. This was based off v0.0.9 of the base US-SE threekit integration",
+  "builders": {
+    "react": "3.x",
+    "messages": "1.x",
+    "docs": "0.x",
+    "store": "0.x"
+  },
+  "dependencies": {
+    "vtex.apps-graphql": "3.x",
+    "vtex.product-context": "0.x",
+    "vtex.formatted-price": "0.x"
+  },
+  "registries": [
+    "smartcheckout"
+  ],
+  "policies": [],
+  "settingsSchema": {
+    "title": "Threekit",
+    "type": "object",
+    "properties": {
+      "mode": {
+        "title": "Preview or Production mode?",
+        "type": "string",
+        "default": "preview",
+        "enum": [
+          "preview",
+          "production"
+        ],
+        "enumNames": [
+          "Preview",
+          "Production"
+        ]
+      },
+      "productionEnv": {
+        "title": "What is your environment domain?",
+        "description": "If you are going to use the preview environment, keep this input empty. Otherwise, enter your environment domain.",
+        "type": "string"
+      },
+      "orgId": {
+        "title": "Organization ID",
+        "description": "Enter the ORG ID",
+        "type": "string"
+      },
+      "assetId": {
+        "title": "Asset ID",
+        "description": "Enter the Asset ID",
+        "type": "string"
+      },
+      "stageId": {
+        "title": "Stage ID",
+        "description": "Enter the Stage ID",
+        "type": "string"
+      },
+      "publicToken": {
+        "title": "Public Token",
+        "description": "Enter the Public Token",
+        "type": "string"
+      }
+    }
+  },
+  "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
+}

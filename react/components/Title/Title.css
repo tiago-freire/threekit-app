@@ -1,0 +1,39 @@
+.titleWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: #c31632;
+  margin: 20px 0;
+  position: relative;
+  color: #fff;
+}
+
+.titleIcon {
+  background: #c31632;
+  color: #333;
+  display: inline-block;
+  width: 36px;
+  height: 36px;
+  font-size: 16px;
+  line-height: 36px;
+  text-align: center;
+  padding: 5px;
+  margin-right: 15px;
+}
+
+.titleText {
+  font-size: 14px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.subtitleWrapper {
+  display: flex;
+  flex-direction: row;
+  font-weight: bold;
+  color: #333;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 20px;
+  font-size: 14px;
+}

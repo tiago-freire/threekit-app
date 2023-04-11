@@ -1,0 +1,11 @@
+query GET_APP_SETTINGS($app: String, $version: String) {
+  appSettings(app: $app, version: $version) {
+    message
+  }
+}
+
+# VARIABLES EXAMPLE:
+# {
+#   app: 'pivotree.pvt-training-app',
+#   version: '1.0.0'
+# }

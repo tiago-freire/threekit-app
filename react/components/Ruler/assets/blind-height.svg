@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 275 275" style="enable-background:new 0 0 275 275;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#DDDDDD;}
+	.st1{display:none;}
+	.st2{display:inline;fill:url(#SVGID_1_);}
+	.st3{display:inline;fill:url(#SVGID_2_);}
+	.st4{fill:#DFDFDE;}
+	.st5{display:inline;fill:url(#SVGID_3_);}
+	.st6{display:inline;fill:url(#SVGID_4_);}
+	.st7{opacity:0.5;}
+	.st8{fill:#919191;}
+	.st9{display:inline;fill:#919191;}
+	.st10{display:inline;fill:url(#SVGID_5_);}
+	.st11{display:inline;fill:#DFDFDE;}
+	.st12{display:inline;fill:url(#SVGID_6_);}
+	.st13{display:inline;fill:url(#SVGID_7_);}
+	.st14{display:inline;opacity:0.5;fill:#919191;}
+	.st15{display:inline;}
+	.st16{fill:none;stroke:#F27D04;stroke-width:3;stroke-miterlimit:10;}
+	.st17{fill:#F27D04;}
+	.st18{display:inline;fill:#F27D04;}
+	.st19{fill:#606060;}
+</style>
+<g id="Window_Dividers">
+	<rect x="94.4" y="27.2" class="st0" width="5.6" height="221.1"/>
+	<rect x="175.4" y="27.2" class="st0" width="5.6" height="221.1"/>
+	
+		<rect x="134.7" y="-8.2" transform="matrix(6.123234e-17 -1 1 6.123234e-17 41.2849 233.7841)" class="st0" width="5.6" height="208.9"/>
+	
+		<rect x="134.7" y="71.8" transform="matrix(6.123234e-17 -1 1 6.123234e-17 -38.7151 313.7841)" class="st0" width="5.6" height="208.9"/>
+</g>
+<g id="Wall" class="st1">
+	<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="30.0343" y1="246.323" x2="244.9527" y2="246.323">
+		<stop  offset="0" style="stop-color:#929497"/>
+		<stop  offset="0.5099" style="stop-color:#DFE0E1"/>
+		<stop  offset="1" style="stop-color:#929497"/>
+	</linearGradient>
+	<polyline class="st2" points="245,251.3 245,241.3 30,241.3 30,251.3 245,251.3 	"/>
+	
+		<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="30.0343" y1="246.8234" x2="244.9527" y2="246.8234" gradientTransform="matrix(-1 0 0 -1 275.0212 274.5)">
+		<stop  offset="0" style="stop-color:#929497"/>
+		<stop  offset="0.5099" style="stop-color:#919191"/>
+		<stop  offset="1" style="stop-color:#929497"/>
+	</linearGradient>
+	<polyline class="st3" points="30.1,24.2 30.1,31.2 245,31.2 245,24.2 30.1,24.2 	"/>
+	<path class="st4" d="M276.7-10.5v-7h-279V286h0.2v13h279V-10.5H276.7z M30,24.2h214.7v227.1H30V24.2z"/>
+	
+		<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="30.0685" y1="136.9005" x2="41.1969" y2="136.9005" gradientTransform="matrix(-1 0 0 -1 275.0212 274.5)">
+		<stop  offset="0" style="stop-color:#929497"/>
+		<stop  offset="1" style="stop-color:#CFD0D2"/>
+	</linearGradient>
+	<polygon class="st5" points="245,24.2 245,251 233.8,241 233.8,31.3 	"/>
+	
+		<linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="56.5473" y1="136.9005" x2="67.6757" y2="136.9005" gradientTransform="matrix(1 0 0 -1 -26.4788 274.5)">
+		<stop  offset="0" style="stop-color:#929497"/>
+		<stop  offset="1" style="stop-color:#CFD0D2"/>
+	</linearGradient>
+	<polygon class="st6" points="30.1,24.2 41.2,31.3 41.2,241 30.1,251 	"/>
+</g>
+<g id="Layer_14">
+</g>
+<g id="Layer_13">
+	<g class="st7">
+		<path class="st4" d="M-3.6,300.5v-8.3l-0.2,0v-305l282-6.3v7h0.2v312.5H-3.6z M243.5,249.8V25.7h-212v224.1H243.5z"/>
+		<path class="st8" d="M276.7-17.5v7h0.2V299h-279v-13l-0.2,6.2V-11.3L276.7-17.5 M30.1,251.3h215V24.2h-215V251.3 M279.7-20.6
+			l-3.1,0.1l-279,6.2l-2.9,0.1v2.9v303.5l0.2,0v6.8v3h3h279h3v-3V-10.5v-3h-0.2v-4V-20.6L279.7-20.6z M33.1,27.2h209v221.1h-209
+			V27.2L33.1,27.2z"/>
+	</g>
+	<g class="st1">
+		<path class="st9" d="M243,26.2v223.1h-211V26.2H243 M245,24.2h-215v227.1h215V24.2L245,24.2z"/>
+	</g>
+</g>
+<g id="INSIDE_copy" class="st1">
+	
+		<linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="25.0343" y1="255.8234" x2="253.1996" y2="255.8234" gradientTransform="matrix(-1 0 0 -1 275.0212 274.5)">
+		<stop  offset="0" style="stop-color:#929497"/>
+		<stop  offset="0.5099" style="stop-color:#DFE0E1"/>
+		<stop  offset="1" style="stop-color:#929497"/>
+	</linearGradient>
+	<polyline class="st10" points="21.8,15.2 28.2,22.2 250,22.2 250,15.2 21.8,15.2 	"/>
+	<polygon class="st11" points="277,-2.5 277,287 245,287 245,15.2 30.1,15.2 30.1,277 -2,277 -2,-2.5 	"/>
+	
+		<linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="30.0685" y1="145.9005" x2="41.1969" y2="145.9005" gradientTransform="matrix(-1 0 0 -1 275.0212 274.5)">
+		<stop  offset="0" style="stop-color:#929497"/>
+		<stop  offset="1" style="stop-color:#CFD0D2"/>
+	</linearGradient>
+	<polygon class="st12" points="245,15.2 245,242 233.8,232 233.8,22.3 	"/>
+	
+		<linearGradient id="SVGID_7_" gradientUnits="userSpaceOnUse" x1="56.5473" y1="145.9005" x2="67.6757" y2="145.9005" gradientTransform="matrix(1 0 0 -1 -26.4788 274.5)">
+		<stop  offset="0" style="stop-color:#929497"/>
+		<stop  offset="1" style="stop-color:#CFD0D2"/>
+	</linearGradient>
+	<polygon class="st13" points="30.1,15.2 41.2,22.3 41.2,232 30.1,242 	"/>
+</g>
+<g id="Outside_Height" class="st1">
+	<rect x="10" y="9" class="st14" width="255" height="181"/>
+	<g class="st15">
+		<line class="st16" x1="244.5" y1="15.9" x2="244.5" y2="258.5"/>
+		<polygon class="st17" points="253.3,19.1 235.7,19.1 244.5,9 		"/>
+		<polygon class="st17" points="235.7,255.8 253.3,255.8 244.5,265.9 		"/>
+	</g>
+	<g class="st15">
+		<line class="st16" x1="137.5" y1="15.9" x2="137.5" y2="258.5"/>
+		<polygon class="st17" points="146.3,19.1 128.7,19.1 137.5,9 		"/>
+		<polygon class="st17" points="128.7,255.8 146.3,255.8 137.5,265.9 		"/>
+	</g>
+	<g class="st15">
+		<line class="st16" x1="30.5" y1="15.9" x2="30.5" y2="258.5"/>
+		<polygon class="st17" points="39.3,19.1 21.7,19.1 30.5,9 		"/>
+		<polygon class="st17" points="21.7,255.8 39.3,255.8 30.5,265.9 		"/>
+	</g>
+</g>
+<g id="Outside_Width" class="st1">
+	<rect x="10" y="9" class="st14" width="255" height="181"/>
+	<g class="st15">
+		<line class="st16" x1="17" y1="17.3" x2="260" y2="17.3"/>
+		<polygon class="st17" points="20.2,8.5 20.2,26.1 10.1,17.3 		"/>
+		<polygon class="st17" points="254.9,26.1 254.9,8.5 265,17.3 		"/>
+	</g>
+	<g class="st15">
+		<line class="st16" x1="16.9" y1="136.3" x2="259.9" y2="136.3"/>
+		<polygon class="st17" points="20.1,127.5 20.1,145.1 10,136.3 		"/>
+		<polygon class="st17" points="254.9,145.1 254.9,127.5 265,136.3 		"/>
+	</g>
+	<g class="st15">
+		<line class="st16" x1="17" y1="250.3" x2="260" y2="250.3"/>
+		<polygon class="st17" points="20.2,241.5 20.2,259.1 10.1,250.3 		"/>
+		<polygon class="st17" points="254.9,259.1 254.9,241.5 265,250.3 		"/>
+	</g>
+</g>
+<g id="Inside_Height" class="st1">
+	<rect x="30.1" y="24.2" class="st14" width="215" height="128"/>
+	<g class="st15">
+		<polygon class="st17" points="235.7,240.9 253.3,240.9 244.5,251 		"/>
+		<line class="st16" x1="244.5" y1="29.9" x2="244.5" y2="241.5"/>
+		<polygon class="st17" points="253.3,34.1 235.7,34.1 244.5,24 		"/>
+	</g>
+	<g class="st15">
+		<polygon class="st17" points="128.7,240.9 146.3,240.9 137.5,251 		"/>
+		<line class="st16" x1="137.5" y1="29.9" x2="137.5" y2="241.5"/>
+		<polygon class="st17" points="146.3,34.1 128.7,34.1 137.5,24 		"/>
+	</g>
+	<g class="st15">
+		<polygon class="st17" points="21.7,240.9 39.3,240.9 30.5,251 		"/>
+		<line class="st16" x1="30.5" y1="29.9" x2="30.5" y2="241.5"/>
+		<polygon class="st17" points="39.3,34.1 21.7,34.1 30.5,24 		"/>
+	</g>
+</g>
+<g id="Inside_Width" class="st1">
+	<rect x="30.1" y="24.2" class="st14" width="215" height="128"/>
+	<g class="st15">
+		<line class="st16" x1="35.8" y1="24.3" x2="240.8" y2="24.3"/>
+		<polygon class="st17" points="38.6,15.5 38.6,33.1 30,24.3 		"/>
+		<polygon class="st17" points="236.5,33.1 236.5,15.5 245,24.3 		"/>
+	</g>
+	<g class="st15">
+		<line class="st16" x1="35.8" y1="136.3" x2="240.8" y2="136.3"/>
+		<polygon class="st17" points="38.6,127.5 38.6,145.1 30,136.3 		"/>
+		<polygon class="st17" points="236.5,145.1 236.5,127.5 245,136.3 		"/>
+	</g>
+	<g class="st15">
+		<line class="st16" x1="35.8" y1="251.3" x2="240.8" y2="251.3"/>
+		<polygon class="st17" points="38.6,242.5 38.6,260.1 30,251.3 		"/>
+		<polygon class="st17" points="236.5,260.1 236.5,242.5 245,251.3 		"/>
+	</g>
+</g>
+<g id="Landing_Page_-_Width" class="st1">
+	<g class="st15">
+		<line class="st16" x1="35.8" y1="136.3" x2="240.8" y2="136.3"/>
+		<polygon class="st17" points="38.6,127.5 38.6,145.1 30,136.3 		"/>
+		<polygon class="st17" points="236.5,145.1 236.5,127.5 245,136.3 		"/>
+	</g>
+</g>
+<g id="Landing_Page_-_Height">
+	<g>
+		<polygon class="st17" points="128.7,240.9 146.3,240.9 137.5,251 		"/>
+		<line class="st16" x1="137.5" y1="29.9" x2="137.5" y2="241.5"/>
+		<polygon class="st17" points="146.3,34.1 128.7,34.1 137.5,24 		"/>
+	</g>
+</g>
+<g id="inside_-_generic" class="st1">
+	<rect x="31" y="25" class="st18" width="213" height="128"/>
+</g>
+<g id="outside_-_generic" class="st1">
+	<rect x="10" y="9" class="st18" width="255" height="144"/>
+</g>
+<g id="Scrim">
+</g>
+</svg>

@@ -1,0 +1,49 @@
+.headerSection {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+}
+
+.detailsSection {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 70%;
+}
+
+.topbarSection {
+  display: flex;
+  flex-direction: row;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding-bottom: 3%;
+}
+
+.starIcon {
+  margin-right: 5px;
+}
+
+.productName {
+  font-size: 20px;
+  text-transform: uppercase;
+  border-bottom: none;
+  color: #333;
+  font-weight: 700;
+  letter-spacing: .3px;
+  padding-bottom: 20px;
+  line-height: initial;
+}
+
+.refSection {
+  color: #202020;
+  font-size: 12px;
+  padding-bottom: 20px;
+}
+
+.shortDescription {
+  font-style: italic;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 0;
+  line-height: 25px;
+}
