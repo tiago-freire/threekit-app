@@ -8,7 +8,7 @@ import inside from "./assets/inside_mount.svg";
 import outside from "./assets/outside_mount.svg";
 import { useProductDispatch } from "vtex.product-context";
 import { getConfiguration, getPrice, getAttributes } from "../../modules/threekit";
-import { Spinner } from 'vtex.styleguide'
+// import { Spinner } from 'vtex.styleguide'
 
 export function Cards(props: any) {
   const { attribute, section } = props;
@@ -89,7 +89,7 @@ export function Cards(props: any) {
           </div>
         </div>
       ) : (
-        <Spinner />
+        <></>
       )}
     </>
   );
@@ -98,7 +98,7 @@ export function Cards(props: any) {
 export default function CardsAttribute(props: any) {
   const [attribute, setAttribute] = useAttribute(props.attribute);
 
-  if (!attribute) return <Spinner />;
+  if (!attribute) return <></>;
 
   return (
     <Cards title={props.title} section={props?.section || { title: undefined, type: undefined }} attribute={attribute} setAttribute={setAttribute} />
