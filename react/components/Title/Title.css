@@ -2,14 +2,14 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  background: #c31632;
+  background: #142032;
   margin: 20px 0;
   position: relative;
   color: #fff;
 }
 
 .titleIcon {
-  background: #c31632;
+  background: #142032;
   color: #333;
   display: inline-block;
   width: 36px;

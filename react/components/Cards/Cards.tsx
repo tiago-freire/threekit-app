@@ -1,50 +1,56 @@
-import React from 'react'
-import { useAttribute } from '@threekit-tools/treble'
+import React from "react";
+import { useAttribute } from "@threekit-tools/treble";
 
-import styles from './Cards.css'
-import Title from '../Title/Title'
-import checkmark from './assets/checkmark_white.png'
-import inside from './assets/inside_mount.svg'
-import outside from './assets/outside_mount.svg'
-import { useProductDispatch } from 'vtex.product-context';
-import {getConfiguration, getPrice, getAttributes} from '../../modules/threekit';
+import styles from "./Cards.css";
+import Title from "../Title/Title";
+import checkmark from "./assets/checkmark_white.png";
+import inside from "./assets/inside_mount.svg";
+import outside from "./assets/outside_mount.svg";
+import { useProductDispatch } from "vtex.product-context";
+import { getConfiguration, getPrice, getAttributes } from "../../modules/threekit";
+import { Spinner } from 'vtex.styleguide'
 
 export function Cards(props: any) {
-  const { attribute, section } = props
-  const { title, type } = section
+  const { attribute, section } = props;
+  const { title, type } = section;
 
-  if (!attribute) return <></>
-  const isMountType = attribute?.label.includes('Select Mount Type')
+  if (!attribute) return <></>;
+  const isMountType = attribute?.label.includes("Select Mount Type");
 
   var dispatch = useProductDispatch();
-  const attributes = getAttributes()
+  const attributes = getAttributes();
   const configuration = getConfiguration();
 
   function handleClick() {
-        attributes.map((a) => {   
-         if(dispatch) {     
-          dispatch({
-            type: 'SET_ASSEMBLY_OPTIONS', 
-            args: {
-              groupInputValues: {[a.name]: configuration[a.name]},
-              groupId: a.name,
-              groupItems: [{
+    attributes.map((a) => {
+      const { name } = a;
+      const attrName = name.replaceAll("?", "");
+
+      if (dispatch) {
+        dispatch({
+          type: "SET_ASSEMBLY_OPTIONS",
+          args: {
+            groupInputValues: { [attrName]: configuration[name] },
+            groupId: attrName,
+            groupItems: [
+              {
                 id: "1",
-                quantity: 1,
+                quantity: 0,
                 seller: "VTEX",
                 initialQuantity: 1,
-                choiceType: 'SINGLE',
-                name: '',
+                choiceType: "SINGLE",
+                name: "",
                 price: 10,
-                children: null
-              }],
-              isValid: true
-          }
-        })
-        }
-      })
-      var tag : any = document.getElementsByClassName("vtextitantools-threekit-app-1-x-price")[0]
-      tag.innerHTML= "$" + getPrice().toFixed(2);
+                children: null,
+              },
+            ],
+            isValid: true,
+          },
+        });
+      }
+    });
+    var tag: any = document.getElementsByClassName("vtextitantools-threekit-app-1-x-price")[0];
+    tag.innerHTML = "$" + getPrice().toFixed(2);
   }
 
   return (
@@ -59,12 +65,8 @@ export function Cards(props: any) {
                 type="button"
                 title={item.label}
                 onClick={() => item.handleSelect(item.name).then(handleClick)}
-                className={`${styles.buttonWrapper} ${
-                  item.selected ? styles.selected : styles.unselected
-                } ${
-                  item.metadata?._thumbnail || isMountType
-                    ? styles.hasThumbnail
-                    : ''
+                className={`${styles.buttonWrapper} ${item.selected ? styles.selected : styles.unselected} ${
+                  item.metadata?._thumbnail || isMountType ? styles.hasThumbnail : ""
                 }`}
               >
                 {item.selected && (
@@ -72,19 +74,12 @@ export function Cards(props: any) {
                     <img src={checkmark} alt="" />
                   </span>
                 )}
-                {item.metadata?._thumbnail && (
-                  <span
-                    className={styles.card}
-                    style={{ background: `url(${item.metadata?._thumbnail})` }}
-                  />
-                )}
+                {item.metadata?._thumbnail && <span className={styles.card} style={{ background: `url(${item.metadata?._thumbnail})` }} />}
                 {isMountType && (
                   <span
                     className={styles.card}
                     style={{
-                      background: `url(${
-                        item?.label === 'Inside' ? inside : outside
-                      })`,
+                      background: `url(${item?.label === "Inside" ? inside : outside})`,
                     }}
                   />
                 )}
@@ -94,23 +89,18 @@ export function Cards(props: any) {
           </div>
         </div>
       ) : (
-        <></>
+        <Spinner />
       )}
     </>
-  )
+  );
 }
 
 export default function CardsAttribute(props: any) {
-  const [attribute, setAttribute] = useAttribute(props.attribute)
+  const [attribute, setAttribute] = useAttribute(props.attribute);
 
-  if (!attribute) return <></>
+  if (!attribute) return <Spinner />;
 
   return (
-    <Cards
-      title={props.title}
-      section={props?.section || { title: undefined, type: undefined }}
-      attribute={attribute}
-      setAttribute={setAttribute}
-    />
-  )
+    <Cards title={props.title} section={props?.section || { title: undefined, type: undefined }} attribute={attribute} setAttribute={setAttribute} />
+  );
 }

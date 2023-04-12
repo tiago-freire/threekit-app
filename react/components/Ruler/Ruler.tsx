@@ -48,7 +48,7 @@ export function Ruler(props: any) {
            groupId: a.name,
            groupItems: [{
              id: "1",
-             quantity: 1,
+             quantity: 0,
              seller: "VTEX",
              initialQuantity: 1,
              choiceType: 'SINGLE',
