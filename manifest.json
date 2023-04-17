@@ -4,6 +4,9 @@
   "version": "1.0.2",
   "title": "VTEX Titan Tools ThreeKit POC",
   "description": "VTEX Titan Tools blind configuration repo, using Threekit. This was based off v0.0.9 of the base US-SE threekit integration",
+  "scripts": {
+    "postreleasy": "vtex publish"
+  },
   "builders": {
     "react": "3.x",
     "messages": "1.x",
