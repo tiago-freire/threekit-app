@@ -1,6 +1,4 @@
 {
-  "name": "CHANGE_ME",
-  "version": "0.0.0",
   "scripts": {
     "test": "vtex-test-tools test"
   },
@@ -29,6 +27,6 @@
     "vtex.product-context": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-context@0.10.0/public/@types/vtex.product-context",
     "vtex.render-runtime": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.132.4/public/@types/vtex.render-runtime",
     "vtex.styleguide": "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.146.3/public/@types/vtex.styleguide",
-    "vtextitantools.threekit-app": "https://dev--vtextitantools.myvtex.com/_v/private/typings/linked/v1/vtextitantools.threekit-app@1.0.0+build1681309215/public/@types/vtextitantools.threekit-app"
+    "vtextitantools.threekit-app": "https://dev--vtextitantools.myvtex.com/_v/private/typings/linked/v1/vtextitantools.threekit-app@1.0.2+build1681503471/public/@types/vtextitantools.threekit-app"
   }
 }

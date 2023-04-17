@@ -6039,9 +6039,9 @@ verror@1.10.0:
   version "9.146.3"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.146.3/public/@types/vtex.styleguide#05558160f29cd8f4aefe419844a4bd66e2b3fdbb"
 
-"vtextitantools.threekit-app@https://dev--vtextitantools.myvtex.com/_v/private/typings/linked/v1/vtextitantools.threekit-app@1.0.0+build1681309215/public/@types/vtextitantools.threekit-app":
-  version "1.0.0"
-  resolved "https://dev--vtextitantools.myvtex.com/_v/private/typings/linked/v1/vtextitantools.threekit-app@1.0.0+build1681309215/public/@types/vtextitantools.threekit-app#c39703795b8c4aff15f54335f9814d018bbc3fa0"
+"vtextitantools.threekit-app@https://dev--vtextitantools.myvtex.com/_v/private/typings/linked/v1/vtextitantools.threekit-app@1.0.2+build1681503471/public/@types/vtextitantools.threekit-app":
+  version "1.0.2"
+  resolved "https://dev--vtextitantools.myvtex.com/_v/private/typings/linked/v1/vtextitantools.threekit-app@1.0.2+build1681503471/public/@types/vtextitantools.threekit-app#580f393c233c247fa5e931bf8804923996f4ea53"
 
 w3c-hr-time@^1.0.1:
   version "1.0.2"

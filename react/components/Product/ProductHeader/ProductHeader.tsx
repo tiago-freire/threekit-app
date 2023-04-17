@@ -1,15 +1,19 @@
-import React from 'react'
-import { useProduct } from 'vtex.product-context'
+import React from "react";
+import { useProduct } from "vtex.product-context";
 
-import styles from './ProductHeader.css'
-import start from '../assets/premium.png'
-import Price from '../Price/Price'
+import styles from "./ProductHeader.css";
+import start from "../assets/premium.png";
+import Price from "../Price/Price";
 
-export default function ProductHeader() {
-  const item = useProduct()
-  const name = item?.product?.productName
-  const shortDescription = item?.product?.metaTagDescription
-  const productReference = item?.product?.productReference
+interface ProductHeaderProps extends React.HTMLAttributes<HTMLElement> {
+  PriceReplaceComponent?: React.ComponentType;
+}
+
+export default function ProductHeader({ PriceReplaceComponent }: ProductHeaderProps) {
+  const item = useProduct();
+  const name = item?.product?.productName;
+  const shortDescription = item?.product?.metaTagDescription;
+  const productReference = item?.product?.productReference;
 
   return (
     <>
@@ -25,8 +29,8 @@ export default function ProductHeader() {
           <div className={styles.refSection}>Ref: {productReference}</div>
           <div className={styles.shortDescription}>{shortDescription}</div>
         </div>
-        <Price />
+        {PriceReplaceComponent ? <PriceReplaceComponent /> : <Price />}
       </div>
     </>
-  )
+  );
 }

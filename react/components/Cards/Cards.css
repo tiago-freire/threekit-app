@@ -2,9 +2,12 @@
   margin-top: 0;
   margin-bottom: 5px;
 }
+
 .cardWrapper {
   display: flex;
   margin-bottom: 1.5rem;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 .buttonWrapper {
@@ -23,10 +26,6 @@
   display: block;
   width: 100%;
   min-height: 110px;
-}
-
-.buttonWrapper:not(:last-child) {
-  margin-right: 10px;
 }
 
 .buttonWrapper:hover {
@@ -68,4 +67,10 @@
 .flag__selected img {
   width: 100%;
   height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .cardWrapper {
+    justify-content: space-evenly;
+  }
 }

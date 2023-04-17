@@ -1,1 +1,21 @@
-{"compilerOptions":{"module":"esnext","moduleResolution":"node","target":"es2017","declaration":true,"declarationDir":"/cache/build/build_vtex_master/vtex.cortinadecor-threekit-app@1.0.1/public/@types/vtex.cortinadecor-threekit-app/react","jsx":"preserve","lib":["es2017","es5","es6","dom","dom.iterable"],"noEmitOnError":false,"sourceMap":true,"typeRoots":["/cache/build/build_vtex_master/vtex.cortinadecor-threekit-app@1.0.1/src/react/node_modules/@types"],"types":["node"],"noImplicitAny":false,"allowSyntheticDefaultImports":true},"exclude":["node_modules"],"include":["./typings/*.d.ts","./**/*.tsx","./**/*.ts","./**/*.tsx","./**/*.ts","./**/*.d.ts"],"typeAcquisition":{"enable":false},"extends":"@vtex/tsconfig"}
+{
+  "compilerOptions": {
+    "module": "esnext",
+    "moduleResolution": "node",
+    "target": "es2017",
+    "declaration": true,
+    "declarationDir": "node_modules",
+    "jsx": "preserve",
+    "lib": ["es2017", "es5", "es6", "dom", "dom.iterable"],
+    "noEmitOnError": false,
+    "sourceMap": true,
+    "typeRoots": ["node_modules"],
+    "types": ["node"],
+    "noImplicitAny": false,
+    "allowSyntheticDefaultImports": true
+  },
+  "exclude": ["node_modules"],
+  "include": ["./typings/*.d.ts", "./**/*.tsx", "./**/*.ts", "./**/*.tsx", "./**/*.ts", "./**/*.d.ts"],
+  "typeAcquisition": { "enable": false },
+  "extends": "@vtex/tsconfig"
+}

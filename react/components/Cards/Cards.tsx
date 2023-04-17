@@ -1,57 +1,19 @@
-import React from "react";
 import { useAttribute } from "@threekit-tools/treble";
-
-import styles from "./Cards.css";
+import { IHydratedAttributeAsset } from "@threekit-tools/treble/dist/types";
+import { useAssemblyOptions } from "../../hooks/useAssemblyOptions";
 import Title from "../Title/Title";
+import styles from "./Cards.css";
 import checkmark from "./assets/checkmark_white.png";
-import inside from "./assets/inside_mount.svg";
-import outside from "./assets/outside_mount.svg";
-import { useProductDispatch } from "vtex.product-context";
-import { getConfiguration, getPrice, getAttributes } from "../../modules/threekit";
-// import { Spinner } from 'vtex.styleguide'
 
-export function Cards(props: any) {
-  const { attribute, section } = props;
-  const { title, type } = section;
+interface CardsProps {
+  attribute: IHydratedAttributeAsset;
+  section: { title: string; type: string };
+}
 
+export function Cards({ attribute, section: { title, type } }: CardsProps) {
   if (!attribute) return <></>;
-  const isMountType = attribute?.label.includes("Select Mount Type");
 
-  var dispatch = useProductDispatch();
-  const attributes = getAttributes();
-  const configuration = getConfiguration();
-
-  function handleClick() {
-    attributes.map((a) => {
-      const { name } = a;
-      const attrName = name.replaceAll("?", "");
-
-      if (dispatch) {
-        dispatch({
-          type: "SET_ASSEMBLY_OPTIONS",
-          args: {
-            groupInputValues: { [attrName]: configuration[name] },
-            groupId: attrName,
-            groupItems: [
-              {
-                id: "1",
-                quantity: 0,
-                seller: "VTEX",
-                initialQuantity: 1,
-                choiceType: "SINGLE",
-                name: "",
-                price: 10,
-                children: null,
-              },
-            ],
-            isValid: true,
-          },
-        });
-      }
-    });
-    var tag: any = document.getElementsByClassName("vtextitantools-threekit-app-1-x-price")[0];
-    tag.innerHTML = "$" + getPrice().toFixed(2);
-  }
+  const { setAssemblyOptions } = useAssemblyOptions();
 
   return (
     <>
@@ -59,14 +21,18 @@ export function Cards(props: any) {
         <div>
           {title !== undefined && <Title title={title} type={type} />}
           <div className={styles.cardWrapper}>
-            {attribute?.values.map((item: any, i: any) => (
+            {attribute?.values.map((item, i: number) => (
               <button
                 key={i}
                 type="button"
                 title={item.label}
-                onClick={() => item.handleSelect(item.name).then(handleClick)}
+                onClick={() => {
+                  // console.log(`Select "${attribute.name}": Old value = ${JSON.stringify(attribute.value)} | New value = ${item.label}`);
+                  item.handleSelect();
+                  setAssemblyOptions();
+                }}
                 className={`${styles.buttonWrapper} ${item.selected ? styles.selected : styles.unselected} ${
-                  item.metadata?._thumbnail || isMountType ? styles.hasThumbnail : ""
+                  item.metadata?._thumbnail ? styles.hasThumbnail : ""
                 }`}
               >
                 {item.selected && (
@@ -75,14 +41,6 @@ export function Cards(props: any) {
                   </span>
                 )}
                 {item.metadata?._thumbnail && <span className={styles.card} style={{ background: `url(${item.metadata?._thumbnail})` }} />}
-                {isMountType && (
-                  <span
-                    className={styles.card}
-                    style={{
-                      background: `url(${item?.label === "Inside" ? inside : outside})`,
-                    }}
-                  />
-                )}
                 <p className={styles.itemLabel}>{item.label}</p>
               </button>
             ))}
@@ -95,12 +53,9 @@ export function Cards(props: any) {
   );
 }
 
-export default function CardsAttribute(props: any) {
-  const [attribute, setAttribute] = useAttribute(props.attribute);
+export default function CardsAttribute({ attribute, section }: any) {
+  const [attr] = useAttribute(attribute);
+  if (!attribute || !attr) return <></>;
 
-  if (!attribute) return <></>;
-
-  return (
-    <Cards title={props.title} section={props?.section || { title: undefined, type: undefined }} attribute={attribute} setAttribute={setAttribute} />
-  );
+  return <Cards section={section || { title: undefined, type: undefined }} attribute={attr as IHydratedAttributeAsset} />;
 }
