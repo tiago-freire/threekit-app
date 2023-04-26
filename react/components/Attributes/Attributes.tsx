@@ -2,8 +2,8 @@ import { useConfigurator, usePrice, useThreekitInitStatus } from "@threekit-tool
 import { ATTRIBUTE_TYPES, IHydratedAttribute } from "@threekit-tools/treble/dist/types";
 import { useEffect } from "react";
 import { useOrderForm } from "vtex.order-manager/OrderForm";
+import { useOrderItems } from "vtex.order-items/OrderItems";
 import { useProduct } from "vtex.product-context";
-import useFetch from "../../hooks/useFetch";
 import Cards from "../Cards/Cards";
 import Ruler from "../Ruler/Ruler";
 import Skeleton from "../Skeleton/Skeleton";
@@ -17,60 +17,33 @@ export function Attributes() {
   const sku = productContext?.product?.items?.[0];
   const productAttachments = sku?.attachments.map((a) => a.name);
 
-  const { orderForm } = useOrderForm();
-  const { items, id: orderFormId } = orderForm;
+  const {
+    orderForm: { items },
+  } = useOrderForm();
+  const { setManualPrice } = useOrderItems();
   const itemIndex = items.findIndex((item) => item.id === sku?.itemId) ?? -1;
+
   const priceContextThreekit = usePrice();
   const priceThreekit = priceContextThreekit?.price;
 
-  console.log("items", items);
-  console.log("itemIndex", itemIndex);
-  console.log("priceThreekit:", priceThreekit);
-
-  const {
-    loading,
-    success,
-    error,
-    fetchFunction: aplicarPrecoManual,
-  } = useFetch({ endpoint: `/api/checkout/pub/orderForm/${orderFormId}/items/${itemIndex}/price`, method: "PUT" });
-
   useEffect(() => {
     if (itemIndex !== -1 && priceThreekit) {
-      console.log("\n\n========================");
-      console.log("SKU index in orderForm:", itemIndex);
-      console.log("Loaded orderForm:", orderForm);
-      console.log("This SKU:", sku);
-      console.log(`aplicarPrecoManual({price: ${priceThreekit}}) =>`, aplicarPrecoManual({ price: (priceThreekit ?? 0) * 100 }));
-      console.log("========================");
+      setManualPrice((priceThreekit ?? 0) * 100, itemIndex);
     }
-  }, [orderForm, itemIndex, priceThreekit]);
-
-  useEffect(() => {
-    console.log("loading", loading);
-    console.log("success", success);
-    console.log("error", error);
-  }, [loading, success, error]);
+  }, [itemIndex, priceThreekit]);
 
   if (!attributes || !productAttachments) return <></>;
 
   const allAttributeNames = Object.keys(attributes);
-  // const allAttributeNames = attributes.map((a) => a.name);
   const selectedAttributeNames = allAttributeNames.filter((attributeName) => productAttachments.includes(attributeName.replace("?", "")));
-
-  // console.log("ATTRIBUTES:", attributes);
-  // console.log("ALL ATTRIBUTE NAMES:", allAttributeNames);
-  // console.log("PRODUCT ATTACHMENTS:", productAttachments);
-  // console.log("SELECTED ATTRIBUTE NAMES:", selectedAttributeNames);
 
   const hasAttributes = selectedAttributeNames.length ? true : false;
 
   const render = (attribute: IHydratedAttribute) => {
     if (attribute.id) {
       if (attribute.type === ATTRIBUTE_TYPES.NUMBER) {
-        // console.log("rendering ruler", attribute.name);
         return <Ruler attribute={attribute.name} key={attribute.id} />;
       } else {
-        // console.log("rendering card", attribute.name);
         return <Cards attribute={attribute.name} key={attribute.id} />;
       }
     }
@@ -81,19 +54,16 @@ export function Attributes() {
     <>
       {loaded ? (
         <>
-          {/* <h2>Custom form</h2> */}
           {hasAttributes &&
             selectedAttributeNames?.map((attributeName: string) => {
               return (
-                <>
-                  <Title title={attributeName} key={attributeName} type="title" />
+                <div key={attributeName}>
+                  <Title title={attributeName} type="title" />
                   {render(attributes[attributeName] as any)}
-                  {/* {render(attributes.find((a) => a.name === attributeName) as any)} */}
-                </>
+                </div>
               );
             })}
-          {/* <h2>Declarative form</h2>
-          <Title title="Styles Available" type="title" />
+          {/* <Title title="Styles Available" type="title" />
           <Cards attribute="Style" />
 
           <Title title="Pick Your Color" type="title" />

@@ -15,7 +15,7 @@ interface RulerProps {
   setAttribute?: (val: string) => Promise<void>;
 }
 
-export function Ruler({ attribute: { label, min = 0, max = 0, value }, setAttribute }: RulerProps) {
+export function Ruler({ attribute: { label, min = 0, max = 0 }, setAttribute }: RulerProps) {
   const [position, setPosition] = useState({ x: 0, y: 0 });
   const [inch, setInch] = useState(min) as any;
   const [eighth, setEighth] = useState(0) as any;
@@ -161,7 +161,7 @@ export function Ruler({ attribute: { label, min = 0, max = 0, value }, setAttrib
 
     for (let index = min; index <= max; index++) {
       content.push(
-        <option key={index} value={index} selected={value === index}>
+        <option key={index} value={index}>
           {index}
         </option>
       );
@@ -234,7 +234,7 @@ export function Ruler({ attribute: { label, min = 0, max = 0, value }, setAttrib
   );
 }
 
-export default function RulerAttribute({attribute}: { attribute: string }) {
+export default function RulerAttribute({ attribute }: { attribute: string }) {
   const [attr, setAttribute] = useAttribute(attribute);
   if (!attribute || !attr) return <></>;
 
