@@ -6019,13 +6019,21 @@ verror@1.10.0:
     core-util-is "1.0.2"
     extsprintf "^1.2.0"
 
-"vtex.apps-graphql@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.apps-graphql@3.14.1/public/@types/vtex.apps-graphql":
-  version "3.14.1"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.apps-graphql@3.14.1/public/@types/vtex.apps-graphql#955c2c5a8d5316ec7c50849acbbd2d245894b8dc"
+"vtex.apps-graphql@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.apps-graphql@3.14.3/public/@types/vtex.apps-graphql":
+  version "3.14.3"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.apps-graphql@3.14.3/public/@types/vtex.apps-graphql#d647b153dc9492f16c8cde3de8ec54a017dccc66"
 
 "vtex.formatted-price@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.formatted-price@0.6.0/public/@types/vtex.formatted-price":
   version "0.6.0"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.formatted-price@0.6.0/public/@types/vtex.formatted-price#75d15d22f9d044f8446b3ccbf331737e139c6b8c"
+
+"vtex.order-items@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-items@0.13.21/public/@types/vtex.order-items":
+  version "0.13.21"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-items@0.13.21/public/@types/vtex.order-items#b88b2d267bc1b2877cae92e657b3934d4f01a960"
+
+"vtex.order-manager@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-manager@0.12.0/public/@types/vtex.order-manager":
+  version "0.12.0"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.order-manager@0.12.0/public/@types/vtex.order-manager#2cf6a9d2a31bc503b783c257695b0d17c09b5696"
 
 "vtex.product-context@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.product-context@0.10.0/public/@types/vtex.product-context":
   version "0.10.0"
@@ -6035,13 +6043,13 @@ verror@1.10.0:
   version "8.132.4"
   resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.render-runtime@8.132.4/public/@types/vtex.render-runtime#66bb41bd4d342e37c9d85172aad5f7eefebfb6dc"
 
-"vtex.styleguide@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.146.3/public/@types/vtex.styleguide":
-  version "9.146.3"
-  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.146.3/public/@types/vtex.styleguide#05558160f29cd8f4aefe419844a4bd66e2b3fdbb"
+"vtex.styleguide@http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.146.4/public/@types/vtex.styleguide":
+  version "9.146.4"
+  resolved "http://vtex.vtexassets.com/_v/public/typings/v1/vtex.styleguide@9.146.4/public/@types/vtex.styleguide#0b5e5ec3e20bbcd4f93701376d007feba294c9d3"
 
-"vtextitantools.threekit-app@https://dev--vtextitantools.myvtex.com/_v/private/typings/linked/v1/vtextitantools.threekit-app@1.0.2+build1681503471/public/@types/vtextitantools.threekit-app":
-  version "1.0.2"
-  resolved "https://dev--vtextitantools.myvtex.com/_v/private/typings/linked/v1/vtextitantools.threekit-app@1.0.2+build1681503471/public/@types/vtextitantools.threekit-app#580f393c233c247fa5e931bf8804923996f4ea53"
+"vtextitantools.threekit-app@https://dev--vtextitantools.myvtex.com/_v/private/typings/linked/v1/vtextitantools.threekit-app@1.0.3+build1682456565/public/@types/vtextitantools.threekit-app":
+  version "1.0.3"
+  resolved "https://dev--vtextitantools.myvtex.com/_v/private/typings/linked/v1/vtextitantools.threekit-app@1.0.3+build1682456565/public/@types/vtextitantools.threekit-app#a3114782dc65f01bdcf0de08faca039824dba49b"
 
 w3c-hr-time@^1.0.1:
   version "1.0.2"

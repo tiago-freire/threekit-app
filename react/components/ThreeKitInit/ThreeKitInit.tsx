@@ -1,4 +1,6 @@
 import { AwaitThreekitLoad, ThreekitProvider } from "@threekit-tools/treble";
+import { OrderItemsProvider } from "vtex.order-items/OrderItems";
+import { OrderFormProvider } from "vtex.order-manager/OrderForm";
 import { Attributes } from "../Attributes/Attributes";
 import PlayerWrapper from "../PlayerWrapper/PlayerWrapper";
 import ProductHeader from "../Product/ProductHeader/ProductHeader";
@@ -51,18 +53,22 @@ const ThreekitInit = (props: TThreekitInit) => {
   };
 
   return (
-    <ThreekitProvider project={project} threekitEnv={mode} playerConfig={playerConfig}>
-      <div className={styles.threekit__wrapper}>
-        <div className={styles.player__wrapper}>
-          <PlayerWrapper />
-        </div>
-        <div className={styles.controls__wrapper}>
-          <ProductHeader PriceReplaceComponent={PriceReplaceComponent} />
-          <Attributes />
-        </div>
-      </div>
-      <AwaitThreekitLoad>{AddToCartButton && <AddToCartButton />}</AwaitThreekitLoad>
-    </ThreekitProvider>
+    <OrderFormProvider>
+      <OrderItemsProvider>
+        <ThreekitProvider project={project} threekitEnv={mode} playerConfig={playerConfig}>
+          <div className={styles.threekit__wrapper}>
+            <div className={styles.player__wrapper}>
+              <PlayerWrapper />
+            </div>
+            <div className={styles.controls__wrapper}>
+              <ProductHeader PriceReplaceComponent={PriceReplaceComponent} />
+              <Attributes />
+            </div>
+          </div>
+          <AwaitThreekitLoad>{AddToCartButton && <AddToCartButton />}</AwaitThreekitLoad>
+        </ThreekitProvider>
+      </OrderItemsProvider>
+    </OrderFormProvider>
   );
 };
 

@@ -1,6 +1,9 @@
-import { useConfigurator, useThreekitInitStatus } from "@threekit-tools/treble";
+import { useConfigurator, usePrice, useThreekitInitStatus } from "@threekit-tools/treble";
 import { ATTRIBUTE_TYPES, IHydratedAttribute } from "@threekit-tools/treble/dist/types";
+import { useEffect } from "react";
+import { useOrderForm } from "vtex.order-manager/OrderForm";
 import { useProduct } from "vtex.product-context";
+import useFetch from "../../hooks/useFetch";
 import Cards from "../Cards/Cards";
 import Ruler from "../Ruler/Ruler";
 import Skeleton from "../Skeleton/Skeleton";
@@ -9,11 +12,44 @@ import Title from "../Title/Title";
 export function Attributes() {
   const [attributes] = useConfigurator() as Record<string, IHydratedAttribute>[];
   const loaded = useThreekitInitStatus();
-  // const attributes = loaded ? window.threekit.configurator.getAttributes() : [];
 
   const productContext = useProduct() as any;
+  const sku = productContext?.product?.items?.[0];
+  const productAttachments = sku?.attachments.map((a) => a.name);
 
-  const productAttachments = productContext?.product?.items?.[0].attachments.map((a) => a.name);
+  const { orderForm } = useOrderForm();
+  const { items, id: orderFormId } = orderForm;
+  const itemIndex = items.findIndex((item) => item.id === sku?.itemId) ?? -1;
+  const priceContextThreekit = usePrice();
+  const priceThreekit = priceContextThreekit?.price;
+
+  console.log("items", items);
+  console.log("itemIndex", itemIndex);
+  console.log("priceThreekit:", priceThreekit);
+
+  const {
+    loading,
+    success,
+    error,
+    fetchFunction: aplicarPrecoManual,
+  } = useFetch({ endpoint: `/api/checkout/pub/orderForm/${orderFormId}/items/${itemIndex}/price`, method: "PUT" });
+
+  useEffect(() => {
+    if (itemIndex !== -1 && priceThreekit) {
+      console.log("\n\n========================");
+      console.log("SKU index in orderForm:", itemIndex);
+      console.log("Loaded orderForm:", orderForm);
+      console.log("This SKU:", sku);
+      console.log(`aplicarPrecoManual({price: ${priceThreekit}}) =>`, aplicarPrecoManual({ price: (priceThreekit ?? 0) * 100 }));
+      console.log("========================");
+    }
+  }, [orderForm, itemIndex, priceThreekit]);
+
+  useEffect(() => {
+    console.log("loading", loading);
+    console.log("success", success);
+    console.log("error", error);
+  }, [loading, success, error]);
 
   if (!attributes || !productAttachments) return <></>;
 
