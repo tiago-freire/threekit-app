@@ -96,6 +96,7 @@ If there are none, add the following sentence instead:
 Thanks goes to these wonderful people:
 - [@wesveio](https://github.com/wesveio)
 - [@benparsell](https://github.com/benparsell)
+- [@tiago-freire](https://github.com/tiago-freire)
 
 <!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
 <!-- prettier-ignore-start -->
