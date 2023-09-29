@@ -1,3 +1,5 @@
+[![Publish and Deploy App](https://github.com/tiago-freire/threekit-app/actions/workflows/publish-and-deploy.yml/badge.svg)](https://github.com/tiago-freire/threekit-app/actions/workflows/publish-and-deploy.yml)
+
 📢 Use this project, [contribute](https://github.com/{OrganizationName}/{AppName}) to it or open issues to help evolve it using [Store Discussion](https://github.com/vtex-apps/store-discussion).
 
 # Threekit Proof of Concept (VTEX)
