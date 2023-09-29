@@ -1,7 +1,7 @@
 {
   "vendor": "ssesandbox04",
   "name": "threekit-app",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "title": "ThreeKit App",
   "description": "ThreeKit App (POC), using https://www.threekit.com",
   "builders": {
@@ -18,9 +18,7 @@
     "vtex.order-manager": "0.x",
     "vtex.order-items": "0.x"
   },
-  "registries": [
-    "smartcheckout"
-  ],
+  "registries": ["smartcheckout"],
   "policies": [],
   "settingsSchema": {
     "title": "Threekit",
@@ -30,14 +28,8 @@
         "title": "Preview or Production mode?",
         "type": "string",
         "default": "preview",
-        "enum": [
-          "preview",
-          "production"
-        ],
-        "enumNames": [
-          "Preview",
-          "Production"
-        ]
+        "enum": ["preview", "production"],
+        "enumNames": ["Preview", "Production"]
       },
       "productionEnv": {
         "title": "What is your environment domain?",
@@ -68,9 +60,7 @@
   },
   "billingOptions": {
     "type": "free",
-    "availableCountries": [
-      "*"
-    ]
+    "availableCountries": ["*"]
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
