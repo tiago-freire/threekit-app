@@ -1,7 +1,7 @@
 {
   "vendor": "ssesandbox04",
   "name": "threekit-app",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "title": "ThreeKit App",
   "description": "ThreeKit App (POC), using https://www.threekit.com",
   "builders": {
@@ -68,7 +68,9 @@
   },
   "billingOptions": {
     "type": "free",
-    "availableCountries": ["*"]
+    "availableCountries": [
+      "*"
+    ]
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
