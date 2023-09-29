@@ -4,9 +4,6 @@
   "version": "0.0.0",
   "title": "ThreeKit App",
   "description": "ThreeKit App (POC), using https://www.threekit.com",
-  "scripts": {
-    "postreleasy": "vtex publish"
-  },
   "builders": {
     "react": "3.x",
     "messages": "1.x",
