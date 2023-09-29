@@ -1,9 +1,9 @@
 {
-  "vendor": "vtextitantools",
+  "vendor": "ssesandbox04",
   "name": "threekit-app",
-  "version": "1.0.5",
-  "title": "VTEX Titan Tools ThreeKit POC",
-  "description": "VTEX Titan Tools blind configuration repo, using Threekit. This was based off v0.0.9 of the base US-SE threekit integration",
+  "version": "0.0.0",
+  "title": "ThreeKit App",
+  "description": "ThreeKit App (POC), using https://www.threekit.com",
   "scripts": {
     "postreleasy": "vtex publish"
   },
@@ -68,6 +68,10 @@
         "type": "string"
       }
     }
+  },
+  "billingOptions": {
+    "type": "free",
+    "availableCountries": ["*"]
   },
   "$schema": "https://raw.githubusercontent.com/vtex/node-vtex-api/master/gen/manifest.schema"
 }
