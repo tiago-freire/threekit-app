@@ -15,7 +15,16 @@
     "allowSyntheticDefaultImports": true
   },
   "exclude": ["node_modules"],
-  "include": ["./typings/*.d.ts", "./**/*.tsx", "./**/*.ts", "./**/*.tsx", "./**/*.ts", "./**/*.d.ts"],
-  "typeAcquisition": { "enable": false },
+  "include": [
+    "./typings/*.d.ts",
+    "./**/*.tsx",
+    "./**/*.ts",
+    "./**/*.tsx",
+    "./**/*.ts",
+    "./**/*.d.ts"
+  ],
+  "typeAcquisition": {
+    "enable": false
+  },
   "extends": "@vtex/tsconfig"
 }
